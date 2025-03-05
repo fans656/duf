@@ -11,8 +11,12 @@ class API:
         self.origin = 'https://duf.fans656.me'
 
     def post(self, path, req: dict = {}):
+        if path.startswith('http'):
+            url = path
+        else:
+            url = f'{self.origin}{path}'
         res = requests.post(
-            f'{self.origin}{path}',
+            url,
             json=req,
             cookies={'token': os.environ.get('TOKEN')},
         )

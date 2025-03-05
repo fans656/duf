@@ -1,6 +1,6 @@
 [project]
 name = "duf"
-version = "0.0.1"
+version = "0.0.3"
 description = "development utilities of fans656"
 readme = "README.md"
 requires-python = ">=3.13"
