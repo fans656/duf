@@ -1,1 +1,1 @@
-./main.sh deploy
+./main.sh deploy $@

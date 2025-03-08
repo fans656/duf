@@ -1,13 +1,22 @@
+import sys
 import uuid
 from typing import Optional
 
 from fastapi import FastAPI, Body, HTTPException
+from starlette.responses import FileResponse
 from fansauth import auth
 
 from .env import env
 
 
-app = auth(FastAPI(), login='api')
+app = FastAPI()
+if 'pytest' not in sys.argv[0]:
+    app = auth(app, login='api')
+
+
+@app.get('/init-duf.sh')
+def init_duf_sh():
+    return FileResponse(env.paths.init_duf_sh)
 
 
 @app.post('/api/host/ls')

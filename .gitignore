@@ -1,3 +1,4 @@
 /data
 /.venv
+/.duf-cache.json
 __pycache__

@@ -1,3 +1,11 @@
+class Test_init_duf:
+
+    def test_get_init_duf_sh(self, client):
+        res = client.get('/init-duf.sh')
+        assert res.status_code == 200
+        assert res.text
+
+
 class Test_host:
 
     def test_add_and_ls(self, client):
