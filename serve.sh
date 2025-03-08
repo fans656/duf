@@ -1,2 +1,2 @@
 #!/bin/bash
-uv run -m duf.server
+uv run -m duf.server $@

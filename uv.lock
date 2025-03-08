@@ -167,7 +167,7 @@ dev = [
 requires-dist = [
     { name = "click", specifier = ">=8.1.8" },
     { name = "deepmerge", specifier = ">=2.0" },
-    { name = "fans", specifier = ">=0.0.56" },
+    { name = "fans", specifier = "==0.0.57" },
     { name = "fansauth", specifier = ">=0.0.31" },
     { name = "fastapi", specifier = ">=0.115.11" },
     { name = "pytz", specifier = ">=2025.1" },
@@ -184,11 +184,11 @@ dev = [
 
 [[package]]
 name = "fans"
-version = "0.0.56"
+version = "0.0.57"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/ff/06/0910a0fbf50f17175494194ac9dcc9778391adbfb06466804ba0adeb2238/fans-0.0.56.tar.gz", hash = "sha256:a983191c6503f549a59a3c1812a75af1806086876a5750f5537f0818cf890ad7", size = 838 }
+sdist = { url = "https://files.pythonhosted.org/packages/e6/37/d7d546c1e687fc91d1d98f007a523145029c91ba0228ddab6f36102571c2/fans-0.0.57.tar.gz", hash = "sha256:a568e487c6ddedaf86678bd2ebe309fda80b22fd4663b3ff55e6effa499dc85a", size = 838 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/27/2a/e4f5b62fd483a1481c0910fc1e094379605d27001fd3eb3dc3a29e52d1c4/fans-0.0.56-py3-none-any.whl", hash = "sha256:614a552e59558eb1f38ca17d85e92fab6bcfb90351995e4d43583e588d6a50b9", size = 75605 },
+    { url = "https://files.pythonhosted.org/packages/60/64/997166717c8c24d76b94fdd84954fb96812fc8f577e1f78a6ffd383d64c8/fans-0.0.57-py3-none-any.whl", hash = "sha256:64b8d538d08cb91a5102ef3f5dab42928fabe701c7b927360bbd16b5c64ce58c", size = 75599 },
 ]
 
 [[package]]

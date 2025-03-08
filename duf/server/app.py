@@ -10,13 +10,18 @@ from .env import env
 
 
 app = FastAPI()
-if 'pytest' not in sys.argv[0]:
+if 'pytest' not in sys.argv[0] and '-d' not in sys.argv:
     app = auth(app, login='api')
 
 
 @app.get('/init-duf.sh')
 def init_duf_sh():
     return FileResponse(env.paths.init_duf_sh)
+
+
+@app.get('/api/host/list')
+def host_list():
+    return list(Hosts())
 
 
 @app.post('/api/host/ls')
