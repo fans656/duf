@@ -64,6 +64,11 @@ def status():
             algorithms=['RS256'],
             options={"verify_signature": False, "verify_exp": False},
         )
+        click.echo('-' * 80 + 'public key')
+        click.echo(public_key)
+        click.echo('-' * 80 + 'token')
+        click.echo(token)
+        click.echo('-' * 80 + 'decoded')
         click.echo(json.dumps(data, indent=2))
         if 'exp' in data:
             exp = datetime.datetime.fromtimestamp(data['exp'])

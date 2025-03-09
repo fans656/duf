@@ -3,6 +3,7 @@ import uuid
 from typing import Optional
 
 from fastapi import FastAPI, Body, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse
 from fansauth import auth
 
@@ -12,6 +13,19 @@ from .env import env
 app = FastAPI()
 if 'pytest' not in sys.argv[0] and '-d' not in sys.argv:
     app = auth(app, login='api')
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = [
+        'https://fans656.me',
+        'http://localhost',
+        'https://localhost.fans656.me',
+    ],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
 
 
 @app.get('/init-duf.sh')
